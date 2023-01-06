@@ -274,3 +274,7 @@ C:\Users\cengi\source\repos\CoreProjectCamp\CoreProjectCamp\bin\Debug\net6.0\Bus
 C:\Users\cengi\source\repos\CoreProjectCamp\CoreProjectCamp\bin\Debug\net6.0\DataAccessLayer.pdb
 C:\Users\cengi\source\repos\CoreProjectCamp\CoreProjectCamp\bin\Debug\net6.0\EntityLayer.pdb
 C:\Users\cengi\source\repos\CoreProjectCamp\CoreProjectCamp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\cengi\source\repos\CoreProjectCamp\CoreProjectCamp\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\cengi\source\repos\CoreProjectCamp\CoreProjectCamp\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\cengi\source\repos\CoreProjectCamp\CoreProjectCamp\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\cengi\source\repos\CoreProjectCamp\CoreProjectCamp\obj\Debug\net6.0\CoreProjectCamp.MvcApplicationPartsAssemblyInfo.cs

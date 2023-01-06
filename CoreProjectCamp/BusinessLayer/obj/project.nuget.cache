@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZCStqx4R4k5jjjesUNpQUg6i8jw29DaUA6XjakEgcaGqV2ZTto7kQ85T5K4lYUCmlIdnzQjlNzYyn5rZxSIHAA==",
+  "dgSpecHash": "J1ppCWUMnubrYCUOh+9VROMbFGgCvOB3xPwQ/d8eTeUsKwUPLN/j7YEGmBC1D9mfUTNNMTcCfJpx9XGr9Nj3wA==",
   "success": true,
   "projectFilePath": "C:\\Users\\cengi\\source\\repos\\CoreProjectCamp\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\cengi\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
+    "C:\\Users\\cengi\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\cengi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\cengi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cengi\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\cengi\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
