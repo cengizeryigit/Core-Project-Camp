@@ -26,7 +26,7 @@ namespace CoreProjectCamp.Controllers
 			{
 				p.WriterStatus = true;
 				p.WriterAbout = "üye";
-				wm.AddT(p);
+				wm.AddWriter(p);
 				return RedirectToAction("Index", "Blog");
 			}
 			else
