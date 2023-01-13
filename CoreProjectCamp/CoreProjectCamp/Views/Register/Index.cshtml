@@ -13,11 +13,9 @@
         <div class="inner-sec">
             <div class="login p-5 bg-light mx-auto mw-100">
                 <form asp-action="Index" , asp-controller="Register" method="post" autocomplete="off">
-
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Adınız Soyadınız</label>
-
                             <input type="text" class="form-control" asp-for="WriterName" id="validationDefault01" placeholder="" required="">
                             <span style="color:red" asp-validation-for="WriterName"></span>
                         </div>
@@ -37,8 +35,6 @@
                             <label for="exampleInputPassword2 mb-2">Tekrar Şifreyi Giriniz</label>
                             <input type="password" class="form-control" asp-for="WriterPassword" id="password2" placeholder="" required="">
                         </div>
-
-
                     </div>
                     <button type="submit" class="btn btn-primary submit mb-4">Kayıt Ol</button>
                     <p>
