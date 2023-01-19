@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreProjectCamp", "CoreProjectCamp\CoreProjectCamp.csproj", "{F431A3E0-5819-4690-9723-299C7B68AA5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreProjectCamp", "CoreProjectCamp\CoreProjectCamp.csproj", "{F431A3E0-5819-4690-9723-299C7B68AA5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{0BB3FEB6-6751-41DC-86CF-D290A5A5C6F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{0BB3FEB6-6751-41DC-86CF-D290A5A5C6F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{8DB4A1F9-D441-4E76-BC32-6239972B49C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{8DB4A1F9-D441-4E76-BC32-6239972B49C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{7675384A-11B7-4DD4-88CA-075F780ADB6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{7675384A-11B7-4DD4-88CA-075F780ADB6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{09B4E860-21B7-4B52-A4D9-3A085E48845B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{09B4E860-21B7-4B52-A4D9-3A085E48845B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogApiDemo", "BlogApiDemo\BlogApiDemo.csproj", "{27ACB7D9-9F23-4430-9172-278A661B924E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwt_core_project_camp", "jwt_core_project_camp\jwt_core_project_camp.csproj", "{CB02EA72-E21F-4BBA-9291-73C3D24C59E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{09B4E860-21B7-4B52-A4D9-3A085E48845B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09B4E860-21B7-4B52-A4D9-3A085E48845B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09B4E860-21B7-4B52-A4D9-3A085E48845B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27ACB7D9-9F23-4430-9172-278A661B924E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27ACB7D9-9F23-4430-9172-278A661B924E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27ACB7D9-9F23-4430-9172-278A661B924E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27ACB7D9-9F23-4430-9172-278A661B924E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB02EA72-E21F-4BBA-9291-73C3D24C59E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB02EA72-E21F-4BBA-9291-73C3D24C59E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB02EA72-E21F-4BBA-9291-73C3D24C59E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB02EA72-E21F-4BBA-9291-73C3D24C59E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,81 @@
+﻿@model UserUpdateViewModel
+@{
+    ViewData["Title"] = "WriterEditProfile";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Yazar Profil Bilgileri Düzenleme</h4>
+                <br>
+               
+                <form class="forms-sample" method="post">
+@*                    <div class="form-group">
+                        <label for="exampleInputName1">Yazar ID</label>
+                        @Html.HiddenFor(x=>x.Id, new {@class = "form-control"})
+                        @Html.TextBoxFor(x=>x.Id, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(x=>x.Id)
+                    </div>*@
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Yazar Ad Soyad</label>
+                        <input type="text" asp-for="@Model.namesurname" class="form-control"/>
+@*                        @Html.ValidationMessageFor(x=>x.NameSurname)*@
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Kullanıcı Adı</label>
+                        <input type="text" asp-for="@Model.username" class="form-control"/>
+                       @* @Html.ValidationMessageFor(x=>x.UserName)*@
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Mail Adresi</label>
+                        <input type="text" asp-for="@Model.mail" class="form-control" />
+                       @* @Html.ValidationMessageFor(x=>x.Email)*@
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Resim Yolu</label>
+                        <input type="text" asp-for="@Model.imageurl" class="form-control" />
+                       @* @Html.ValidationMessageFor(x=>x.Email)*@
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Yeni Şifreniz</label>
+                        <input type="text" asp-for="@Model.password" class="form-control" />
+
+                    </div>
+
+                    @*<div class="form-group">
+                        <label for="exampleInputPassword4">Şifre</label>
+                        @Html.PasswordFor(x=>x.PasswordHash, new {@id ="password1",@class = "form-control"})
+                        @Html.ValidationMessageFor(x=>x.PasswordHash)
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">Şifre</label>
+                        @Html.PasswordFor(x=>x.PasswordHash, new {@id ="password2",@class = "form-control"})
+                        @Html.ValidationMessageFor(x=>x.PasswordHash)
+                    </div>*@
+
+
+
+                    <button type="submit" class="btn btn-gradient-primary mr-2">Güncelle</button>
+                <button class="btn btn-light" asp-action="Index" asp-controller="Dashboard">İptal</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script>
+    window.onload = function () {
+        document.getElementById("password1").onchange = validatePassword;
+        document.getElementById("password2").onchange = validatePassword;
+    }
+    function validatePassword() {
+        var pass2 = document.getElementById("password2").value;
+        var pass1 = document.getElementById("password1").value;
+        if (pass1 != pass2)
+            document.getElementById("password2").setCustomValidity("Şifreniz Eşleşmiyor");
+        else
+            document.getElementById("password2").setCustomValidity('');
+    }
+</script>

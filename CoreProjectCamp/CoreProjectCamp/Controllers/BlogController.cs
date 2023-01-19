@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -10,18 +11,21 @@ using System.Security.Cryptography.Xml;
 
 namespace CoreProjectCamp.Controllers
 {
-    [AllowAnonymous]
+    
     public class BlogController : Controller
     {
         BlogManager bm = new BlogManager(new EfBlogRepository());
         CategoryManager cm = new CategoryManager(new EfCategoryRepository());
 
-        
+        Context c = new Context();
+
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var values = bm.GetBlogListWithCategory();
             return View(values);
         }
+        [AllowAnonymous]
         public IActionResult BlogReadAll(int id)
         {
             ViewBag.id=id;
@@ -30,7 +34,10 @@ namespace CoreProjectCamp.Controllers
         }
         public IActionResult BlogListByWriter()
         {
-            var values= bm.GetListWithCategoryByWriterBm(1);
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
+            var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
+            var values= bm.GetListWithCategoryByWriterBm(writerID);
             return View(values);
         }
         [HttpGet]
@@ -57,6 +64,10 @@ namespace CoreProjectCamp.Controllers
                                                    }).ToList();
             ViewBag.cv = categoryvalues;
 
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
+            var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
+
             BlogValidator bv = new BlogValidator();
             ValidationResult result = bv.Validate(p);
 
@@ -64,7 +75,7 @@ namespace CoreProjectCamp.Controllers
             {
                 p.BlogStatus = true;
                 p.BlogCreateDate=DateTime.Parse(DateTime.Now.ToShortDateString());
-                p.WriterID= 1;
+                p.WriterID= writerID;
                 bm.AddT(p);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }
@@ -102,7 +113,10 @@ namespace CoreProjectCamp.Controllers
         [HttpPost]
         public IActionResult EditBlog(Blog p)
         {
-            p.WriterID = 1;
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
+            var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
+            p.WriterID = writerID;
             p.BlogStatus = true;
             bm.UpdateT(p);
             return RedirectToAction("BlogListByWriter");
